@@ -535,7 +535,7 @@
       title: "Build a landing page from modules",
       duration: "3 min",
       level: "Beginner",
-      photo: R("photoCoupleTablet", "assets/photos/couple-tablet.jpg"),
+      photo: R("photoTutorialLpBuilderPreview", "assets/photos/lp-builder-tutorial-preview.png"),
       videoUrl: RV("videoTutorialLpBuilder", "assets/tutorial-video-lp-builder.mp4"),
     },
     {
