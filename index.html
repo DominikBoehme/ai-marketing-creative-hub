@@ -1,66 +1,69 @@
 <!doctype html>
-<html lang="en">
+<html lang="de">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>AI Marketing Creation Hub · Creative Studio</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Creative Hub umgezogen</title>
+  <meta http-equiv="refresh" content="0; url=https://scout24-creative-ops.github.io/creative-hub/" />
+  <link rel="canonical" href="https://scout24-creative-ops.github.io/creative-hub/" />
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f4f1ea;
+      --card: #fffdf9;
+      --text: #2f2f2f;
+      --muted: #6a675f;
+      --link: #0057b8;
+      --border: #ddd6ca;
+    }
 
-<!-- Resources referenced from JS code (lifted for standalone bundling) -->
-<meta name="ext-resource-dependency" content="assets/photos/hero.jpg" data-resource-id="photoHero" />
-<meta name="ext-resource-dependency" content="assets/photos/couple-tablet.jpg" data-resource-id="photoCoupleTablet" />
-<meta name="ext-resource-dependency" content="assets/photos/family-couch.jpg" data-resource-id="photoFamilyCouch" />
-<meta name="ext-resource-dependency" content="assets/photos/p-114.jpg" data-resource-id="photoP114" />
-<meta name="ext-resource-dependency" content="assets/photos/p-049.jpg" data-resource-id="photoP049" />
-<meta name="ext-resource-dependency" content="assets/photos/stroller.jpg" data-resource-id="photoStroller" />
-<meta name="ext-resource-dependency" content="assets/photos/p-121.jpg" data-resource-id="photoP121" />
-<meta name="ext-resource-dependency" content="assets/tutorial-image-builder.mp4" data-resource-id="videoTutorialImageBuilder" />
-<meta name="ext-resource-dependency" content="assets/photos/tutorial-image-builder-poster.jpg" data-resource-id="photoTutorialImageBuilderPoster" />
-<meta name="ext-resource-dependency" content="assets/tutorial-script-storyboard.mp4" data-resource-id="videoTutorialScriptStoryboard" />
-<meta name="ext-resource-dependency" content="assets/tutorial-video-endcard-editor.mp4" data-resource-id="videoTutorialVideoEndcardEditor" />
-<meta name="ext-resource-dependency" content="assets/photos/tutorial-video-endcard-editor-poster.jpg" data-resource-id="photoTutorialVideoEndcardEditorPoster" />
+    * {
+      box-sizing: border-box;
+    }
 
-<template id="__bundler_thumbnail" data-bg-color="#ffffff">
-  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
-    <rect width="1200" height="800" fill="#ffffff"/>
-  </svg>
-</template>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+      background: linear-gradient(180deg, #f7f3ec 0%, var(--bg) 100%);
+      color: var(--text);
+      font: 16px/1.5 Arial, Helvetica, sans-serif;
+    }
 
-<!-- COSMA design system: tokens, typography, web fonts, icon font -->
-<link rel="stylesheet" href="_ds/cosma-design-system-immoscout24-8eb67f26-7064-4594-8f25-60ab9a5637e2/colors_and_type.css" />
-<link rel="stylesheet" href="_ds/cosma-design-system-immoscout24-8eb67f26-7064-4594-8f25-60ab9a5637e2/fonts/is24-icons.css" />
-<link rel="stylesheet" href="_ds/cosma-design-system-immoscout24-8eb67f26-7064-4594-8f25-60ab9a5637e2/fonts/is24-icons-font.css" />
+    main {
+      width: min(100%, 640px);
+      padding: 32px;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      background: var(--card);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
+    }
 
-<!-- Hub styles -->
-<link rel="stylesheet" href="css/hub-tokens.css" />
-<link rel="stylesheet" href="css/hub-base.css" />
-<link rel="stylesheet" href="css/hub-directions.css" />
-<link rel="stylesheet" href="css/hub-vb.css" />
-<link rel="stylesheet" href="css/hub-vc.css" />
-<link rel="stylesheet" href="css/hub-vd.css" />
+    h1 {
+      margin: 0 0 12px;
+      font-size: 32px;
+      line-height: 1.15;
+    }
+
+    p {
+      margin: 0 0 16px;
+      color: var(--muted);
+    }
+
+    a {
+      color: var(--link);
+      font-weight: 700;
+    }
+  </style>
 </head>
-<body style="font-family: &quot;Make It Better&quot;">
-<div id="root"></div>
-<div id="tweak-root"></div>
-
-<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
-
-<!-- data first (plain JS) -->
-<script src="js/hub-data.js"></script>
-<script src="js/hub-data-detail.js"></script>
-
-<!-- tweaks shell (exports useTweaks + controls to window) -->
-<script type="text/babel" src="tweaks-panel.jsx"></script>
-
-<!-- components, then sections, then app (babel) -->
-<script type="text/babel" src="js/hub-components.jsx"></script>
-<script type="text/babel" src="js/hub-sections-a.jsx"></script>
-<script type="text/babel" src="js/hub-sections-b.jsx"></script>
-<script type="text/babel" src="js/hub-sections-vb.jsx"></script>
-<script type="text/babel" src="js/hub-sections-vc.jsx"></script>
-<script type="text/babel" src="js/hub-sections-vd.jsx"></script>
-<script type="text/babel" src="js/hub-app.jsx"></script>
-<script type="text/babel" src="js/hub-tweaks.jsx"></script>
+<body>
+  <main>
+    <h1>Der Creative Hub ist umgezogen.</h1>
+    <p>Du wirst automatisch zur neuen Creative-Hub-Seite weitergeleitet.</p>
+    <p>Falls die automatische Weiterleitung nicht funktioniert, nutze bitte diesen Link:</p>
+    <p><a href="https://scout24-creative-ops.github.io/creative-hub/">https://scout24-creative-ops.github.io/creative-hub/</a></p>
+  </main>
 </body>
 </html>
