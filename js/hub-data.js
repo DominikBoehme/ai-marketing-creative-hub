@@ -536,6 +536,7 @@
       duration: "3 min",
       level: "Beginner",
       photo: R("photoCoupleTablet", "assets/photos/couple-tablet.jpg"),
+      videoUrl: RV("videoTutorialLpBuilder", "assets/tutorial-video-lp-builder.mp4"),
     },
     {
       id: "t2",
